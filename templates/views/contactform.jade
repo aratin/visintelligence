@@ -13,16 +13,16 @@ block content
                   else
                     form(method='post')
                       input(type='hidden', name='action', value='contact')
-                       .form-group(class=validationErrors.name ? 'has-error' : null)
+                      .form-group(class=validationErrors.name ? 'has-error' : null)
                       label Name
                       input(type='text', name='name.full', value=formData['name.full'], required).form-control
-                       .form-group(class=validationErrors.email ? 'has-error' : null)
+                      .form-group(class=validationErrors.email ? 'has-error' : null)
                       label Email
                       input(type='email', name='email', value=formData.email, required).form-control
-                       .form-group
+                      .form-group
                       label Message Subject
                       input(type='text', name='messagesubject', value=formData.messagesubject, required).form-control
-                       .form-group
+                      .form-group
                       label Enter your Message
                       textarea(name='messagetext',rows=4).form-control= formData.messagetext
                       br
