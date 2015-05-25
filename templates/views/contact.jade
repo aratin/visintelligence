@@ -1,35 +1,109 @@
-//-extends ../layouts/default
-
-block intro
-	h1 Contact
-	//- p.lead This is an example contact form, demonstrating how to process forms and save data with Keystone.
-	//- p.lead Please follow us for updates to the demo site.
-		
-		
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width")
+    
+    title= title || 'Visual Intelligence'
+    link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700', rel='stylesheet')
+    link(href="/styles/reset.css", rel="stylesheet",type='text/css')
+    link(href="/styles/font-awesome.min.css", rel="stylesheet", type='text/css')
+    link(href="/styles/bootstrap.min.css", rel="stylesheet", type='text/css')
+    link(href="/styles/bootstrap-theme.css", rel="stylesheet")
+    link(href="/styles/vi-style.css", rel="stylesheet", type='text/css')
 block content
-	if enquirySubmitted
-		h3 Thanks for getting in touch.
-	else
-		form(method='post')
-			input(type='hidden', name='action', value='contact')
-			.form-group(class=validationErrors.name ? 'has-error' : null)
-				label Name
-				input(type='text', name='name.full', value=formData['name.full'], required).form-control
-			.form-group(class=validationErrors.email ? 'has-error' : null)
-				label Email
-				input(type='email', name='email', value=formData.email, required).form-control
-			.form-group
-				label Phone
-				input(type='text', name='phone', value=formData.phone, required, placeholder='(optional)').form-control
-			.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-				label What are you contacting us about?
-				select(name='enquiryType').form-control
-					option(value='') (select one)
-					each type in enquiryTypes
-						option(value=type.value, selected=formData.enquiryType == type.value)= type.label
-			.form-group(class=validationErrors.message ? 'has-error' : null)
-				label Message
-				textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
-			.form-actions
-				p.help-block (note that others can see your enquiry in the <a href='/keystone/enquiries'>admin ui</a>)
-				button(type='submit').btn.btn-primary Send
+    header
+      #header-top
+        .container
+          .row
+            .col-md-3.col-sm-3.col-xs-12
+              .logo
+                a(href="/")
+                  img(src="./images/logoimage.png", alt="logo")
+            .col-md-9.col-sm-9.col-xs-12
+              .top-contact.pull-right
+                .box-1
+                  img(src="./images/mail-icon.png")
+                  a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank") contact@vis-intel.com
+                .box-2
+                  img(src="./images/telephone-icon.png")
+                  span (610)990-7057
+      #top-navbar.navbar.navbar-inverse
+        .container
+          div.navbar-header
+              button.navbar-toggle.collapsed(aria-controls='navbar', aria-expanded='false', data-target='#navbar', data-toggle='collapse', type='button')
+                span.sr-only Toggle navigation
+                  |               
+                  span.icon-bar
+                  |               
+                  span.icon-bar
+                  |               
+                  span.icon-bar
+              a.navbar-brand.hidden-lg.hidden-md.hidden-sm(href="#") Menu
+            div#navbar.navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li#home
+                  a(href="/") Home
+                li.dropdown#CompanyInfo
+                  a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="#") Company Info
+                    span.caret
+                  ul.dropdown-menu.outer-menu(role="menu")
+                    li
+                      a(href="/company-profile") Company Profile
+                    li
+                      a(href="/mangementteam")
+                        | Management Team
+                    li
+                      a(href="/differentiator") Differentiator
+                      a(href="/career") Career
+                    li
+                      a(href="/partner") Partner
+                li.dropdown#offering
+                  a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="/offering") 
+                    | Offering
+                    span.caret
+                  ul.dropdown-menu.outer-menu(role="menu")
+                    li
+                      a(href="/softwareproduct") Software Product
+                    li
+                      a(href="/consultingservice")
+                        | Consulting Service
+                    li
+                      a(href="/msp") MSP & Solution Hosting
+                    li
+                      a(href="/specializedanalyse") Specialized Analyse
+                    li
+                      a(href="/technologyresale") Technology Resale
+                li#contactlist
+                  a(href="/contact") Contact Us
+              .clearfix
+      section
+      #inner-banner
+      #inner-content-box#content-box
+		if enquirySubmitted
+			h3 Thanks for getting in touch.
+		else
+			form(method='post')
+				input(type='hidden', name='action', value='contact')
+				.form-group(class=validationErrors.name ? 'has-error' : null)
+					label Name
+					input(type='text', name='name.full', value=formData['name.full'], required).form-control
+				.form-group(class=validationErrors.email ? 'has-error' : null)
+					label Email
+					input(type='email', name='email', value=formData.email, required).form-control
+				.form-group
+					label Phone
+					input(type='text', name='phone', value=formData.phone, required, placeholder='(optional)').form-control
+				.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
+					label What are you contacting us about?
+					select(name='enquiryType').form-control
+						option(value='') (select one)
+						each type in enquiryTypes
+							option(value=type.value, selected=formData.enquiryType == type.value)= type.label
+				.form-group(class=validationErrors.message ? 'has-error' : null)
+					label Message
+					textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
+				.form-actions
+					p.help-block (note that others can see your enquiry in the <a href='/keystone/enquiries'>admin ui</a>)
+					button(type='submit').btn.btn-primary Send
