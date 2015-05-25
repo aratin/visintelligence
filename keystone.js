@@ -23,7 +23,7 @@ keystone.init({
 	'emails': 'templates/emails',
 	
 	'auto update': true,
-	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/ayush-keystone-demo',
+	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://shridhar.malagi@clariontechnologies.co.in:Clarion~1@ds047911.mongolab.com:47911/ayush-keystone-demo',
 	'session': true,
 	'auth': true,
 	'user model': 'User',
