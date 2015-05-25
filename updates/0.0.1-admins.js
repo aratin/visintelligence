@@ -9,7 +9,7 @@
 
 exports.create = {
 	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', email: 'shridhar.malagi@clariontechnologies.co.in', password: 'visintel', isAdmin: true }
+		{ 'name.first': 'Admin', 'name.last': 'User', email: 'arati.nankar@planetria.com', password: 'visintel', isAdmin: true }
 	]
 };
 
