@@ -1,0 +1,21 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.specializedanalyses[0].heading}
+                .row
+                  .col-md-4
+                   if data.specializedanalyses.length
+                      if data.specializedanalyses[0].specialiseimage.exists
+                        img(id="image",src=data.specializedanalyses[0].specialiseimage.url)
+                  .col-md-8
+                    p
+                      | #{data.specializedanalyses[0].specialiseAnyalisetext}
+              include ../views/listingmenu
+            

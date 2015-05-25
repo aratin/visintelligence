@@ -1,0 +1,19 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.employers[0].heading}
+                .row
+                  .col-md-4
+                    if data.employers.length
+                          img(id="image",src=data.employers[0].image.url)
+                  .col-md-8
+                      p
+                        | #{data.employers[0].longText}
+              include ../views/footermenunavigation

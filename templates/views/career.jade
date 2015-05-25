@@ -1,0 +1,32 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.careers[0].heading}
+                .row
+                  .col-md-4
+                    if data.careers.length
+                        if data.careers[0].careerImage.exists
+                          img(id="image",src=data.careers[0].careerImage.url)
+                  .col-md-8
+                    p
+                      | #{data.careers[0].careerText}
+                      br
+                      br
+                      | #{data.careers[0].careerSubtext}
+                      br
+                      | #{data.careers[0].careerSubstring}
+                      br
+                      | #{data.careers[0].careerShorttext}
+                      br
+                      | #{data.careers[0].careerShortstring}
+                      br
+                      | #{data.careers[0].careerEmail}
+              include ../views/companyinfolistmenu
+            

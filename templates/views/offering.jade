@@ -1,0 +1,21 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.offerings[0].heading}
+                .row
+                  .col-md-4
+                    if data.offerings.length
+                      .msp-images
+                        if data.offerings[0].offeringImage.exists
+                          .row
+                            .col-xs-12
+                                img(id="image",src=data.offerings[0].offeringImage.url)
+                  .col-md-8
+              include ../views/listingmenu

@@ -1,0 +1,56 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.differentiators[0].heading}
+                .row
+                  .col-md-4
+                    if data.differentiators.length
+                          img(id="image",src=data.differentiators[0].image.url)
+                  .col-md-8
+                    p
+                      | #{data.differentiators[0].text}
+                 .row
+                  .col-md-4
+                    if data.differentiators.length
+                          img(id="image",src=data.differentiators[0].image1.url)
+                  .col-md-8
+                    h4
+                      | #{data.differentiators[0].subText}
+                    p
+                      | #{data.differentiators[0].shortText}
+
+                 .row
+                  .col-md-4
+                    if data.differentiators.length
+                          img(id="image",src=data.differentiators[0].image2.url)
+                  .col-md-8
+                    h4
+                      | #{data.differentiators[0].shortStringText}
+                    P
+                     | #{data.differentiators[0].longStringText}
+                 .row
+                  .col-md-4
+                    if data.differentiators.length
+                          img(id="image",src=data.differentiators[0].image3.url)
+                  .col-md-8
+                    h4
+                      | #{data.differentiators[0].textLong}
+                    p
+                      | #{data.differentiators[0].textShort}
+                      
+                  .col-md-8
+                    h4
+                      | #{data.differentiators[0].textString}
+                    p
+                      | #{data.differentiators[0].textShortString}
+                    div
+                      .someClass                    
+              include ../views/companyinfolistmenu
+              

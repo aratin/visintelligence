@@ -1,0 +1,31 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.geospatialanalytics[0].heading}
+                .row
+                  .col-md-4
+                    if data.geospatialanalytics.length
+                        if data.geospatialanalytics[0].image.exists
+                          img(id="image",src=data.geospatialanalytics[0].image.url)
+                  .col-md-8
+                    p
+                      | #{data.geospatialanalytics[0].text}
+                      br
+                    p
+                      | #{data.geospatialanalytics[0].subText}
+                      br
+                    p
+                      | #{data.geospatialanalytics[0].shortString}
+                      br
+                    p
+                      | #{data.geospatialanalytics[0].longString}
+              .expand
+              include ../views/listingmenu
+              

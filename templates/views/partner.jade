@@ -1,0 +1,24 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.partners[0].heading}
+                .row
+                  .col-md-3
+                    .thumbnail
+                      img.img-responsive(id="image",src='#{data.partners[0].partnerimage}' alt='#{data.partners[0].partnerimage}')
+                    .caption
+                      h3.text-center #{data.partners[0].partnertext}
+                  .col-md-3
+                    .thumbnail
+                      img.img-responsive(id="image",src='#{data.partners[0].partnersubimage}')
+                    .caption
+                      h3.text-center #{data.partners[0].partnersubtext}
+              include ../views/companyinfolistmenu
+            

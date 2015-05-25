@@ -1,0 +1,27 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.healthcareproviders[0].heading}
+                .row
+                  .col-md-4
+                    if data.healthcareproviders.length
+                          img(id="image",src=data.healthcareproviders[0].image.url)
+                  .col-md-8
+                      p
+                        | #{data.healthcareproviders[0].text}
+                      p
+                        | #{data.healthcareproviders[0].subText}
+                      p
+                        | #{data.healthcareproviders[0].shortText}
+                      p
+                        | #{data.healthcareproviders[0].subString}
+                      p
+                        | #{data.healthcareproviders[0].shortString}
+              include ../views/footermenunavigation

@@ -1,0 +1,33 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.comparativebenchmarkings[0].heading}
+                .row
+                  .col-md-4
+                    if data.comparativebenchmarkings.length
+                        if data.comparativebenchmarkings[0].image.exists
+                            img(id="image",src=data.comparativebenchmarkings[0].image.url)
+                  .col-md-8
+                      p
+                        | #{data.comparativebenchmarkings[0].text}
+                        br
+                      p
+                        | #{data.comparativebenchmarkings[0].subText}
+                        br
+                      p
+                        | #{data.comparativebenchmarkings[0].shortString}
+                        br
+                      p
+                        | #{data.comparativebenchmarkings[0].longString}
+                        br
+                      p
+                        | #{data.comparativebenchmarkings[0].subString}
+              .expand
+              include ../views/listingmenu

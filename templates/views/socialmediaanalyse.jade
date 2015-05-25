@@ -1,0 +1,36 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.socialmediaanalyses[0].heading}
+                .row
+                  .col-md-4
+                    if data.socialmediaanalyses.length
+                        if data.socialmediaanalyses[0].image.exists
+                            img(id="image",src=data.socialmediaanalyses[0].image.url)
+                  .col-md-8
+                      h4
+                        | #{data.socialmediaanalyses[0].headingtext}
+                      p
+                        | #{data.socialmediaanalyses[0].text}
+                      h4
+                        | #{data.socialmediaanalyses[0].headingtext1}
+                      p
+                        | #{data.socialmediaanalyses[0].subText}
+                      h4
+                        | #{data.socialmediaanalyses[0].shortString}
+                      p
+                        | #{data.socialmediaanalyses[0].longString}
+                      p
+                        | #{data.socialmediaanalyses[0].subString}
+                      p
+                        | #{data.socialmediaanalyses[0].subStringText}
+              .expand
+              include ../views/listingmenu
+              

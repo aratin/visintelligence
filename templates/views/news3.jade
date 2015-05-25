@@ -1,0 +1,22 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                .row
+                  .col-md-4
+                    if data.news3s.length
+                        if data.news3s[0].image.exists
+                          img(id="image",src=data.news3s[0].image.url)
+                  .col-md-8
+                    h3 News3:-
+                  small #{data.news3s[0].date}
+                    p
+                      | #{data.news3s[0].news1}
+              include ../views/companyinfolistmenu
+              

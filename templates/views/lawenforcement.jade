@@ -1,0 +1,31 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.lawenforcements[0].heading}
+                .row
+                  .col-md-4
+                    if data.lawenforcements.length
+                        if data.lawenforcements[0].image.exists
+                          img(id="image",src=data.lawenforcements[0].image.url))
+                  .col-md-8
+                    p
+                      | #{data.lawenforcements[0].text}
+                 .row
+                  .col-md-4
+                   if data.lawenforcements.length
+                        if data.lawenforcements[0].subImage.exists
+                          img(id="image1",src=data.lawenforcements[0].subImage.url)
+                  .col-md-8
+                    p
+                      | #{data.lawenforcements[0].shortText}
+                      br
+                      | #{data.lawenforcements[0].longText}
+              include ../views/footermenunavigation
+            

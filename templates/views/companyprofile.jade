@@ -1,0 +1,41 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.companyprofiles[0].heading}
+                .row
+                  .col-md-4
+                    if data.companyprofiles.length
+                        if data.companyprofiles[0].image.exists
+                            img(id="image",src=data.companyprofiles[0].image.url)
+                  .col-md-8
+                      p
+                        | #{data.companyprofiles[0].text}
+                      p
+                        | #{data.companyprofiles[0].subText}
+                      p
+                        | #{data.companyprofiles[0].shortString}
+                      p
+                        | #{data.companyprofiles[0].longString}
+                      p
+                        | #{data.companyprofiles[0].subString}
+                      p
+                        | #{data.companyprofiles[0].subStringText}
+                      p
+                        | #{data.companyprofiles[0].subShortText}
+                      h4
+                        | #{data.companyprofiles[0].subheading}
+                      p
+                        | #{data.companyprofiles[0].subStringText1}
+                      h4
+                        | #{data.companyprofiles[0].subheadingtext}
+                      p
+                        | #{data.companyprofiles[0].subStringText2}
+              include ../views/companyinfolistmenu
+            

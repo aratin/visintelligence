@@ -1,0 +1,28 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.visualbusinessintelligences[0].heading}
+                .row
+                  .col-md-4
+                    if data.visualbusinessintelligences.length
+                        if data.visualbusinessintelligences[0].image.exists
+                          img(id="image",src=data.visualbusinessintelligences[0].image.url)
+                  .col-md-8
+                    p
+                      | #{data.visualbusinessintelligences[0].text}
+                    p
+                      | #{data.visualbusinessintelligences[0].subText}
+                    p
+                      | #{data.visualbusinessintelligences[0].shortString}
+                    p
+                      | #{data.visualbusinessintelligences[0].longString}
+              .expand
+              include ../views/listingmenu
+            

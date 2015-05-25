@@ -1,0 +1,21 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.tibcospotfires[0].heading}
+                .row
+                  .col-md-4
+                    if data.tibcospotfires.length
+                        if data.tibcospotfires[0].image.exists
+                          img(id="image",src=data.tibcospotfires[0].image.url)
+                  .col-md-8
+                    p
+                      | #{data.tibcospotfires[0].longText}
+              include ../views/whatweoffersnavigation
+            

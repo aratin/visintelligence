@@ -1,0 +1,30 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+          #offerings.row
+            .col-md-9
+                if enquirySubmitted
+                  h3 Thanks for getting in touch.
+                else
+                  form(method='post')
+                    input(type='hidden', name='action', value='contact')
+                    .form-group(class=validationErrors.name ? 'has-error' : null)
+                    label Name
+                    input(type='text', name='name.full', value=formData['name.full'], required).form-control
+                    .form-group(class=validationErrors.email ? 'has-error' : null)
+                    label Email
+                    input(type='email', name='email', value=formData.email, required).form-control
+                    .form-group
+                    label Phone
+                    input(type='text', name='phone', value=formData.phone, required).form-control
+                    .form-group
+                    label Message
+                    textarea(name='message',rows=4).form-control= formData.message
+                    br
+                    button(type='submit').btn.btn-primary Send
+            include ../views/companyinfolistmenu
+            
