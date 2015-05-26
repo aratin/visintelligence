@@ -12,161 +12,163 @@ html
         link(href="/styles/bootstrap.min.css", rel="stylesheet", type='text/css')
         link(href="/styles/bootstrap-theme.css", rel="stylesheet")
         link(href="/styles/vi-style.css", rel="stylesheet", type='text/css')
-        body: .wrapper
-          block content
-              header
-                #header-top
-                  .container
-                    .row
-                      .col-md-3.col-sm-3.col-xs-12
-                        .logo
-                          a(href="/")
-                            img(src="./images/logoimage.png", alt="logo")
-                      .col-md-9.col-sm-9.col-xs-12
-                        .top-contact.pull-right
-                          .box-1
-                            img(src="./images/mail-icon.png")
-                            a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank") contact@vis-intel.com
-                          .box-2
-                            img(src="./images/telephone-icon.png")
-                            span (610)990-7057
-                #top-navbar.navbar.navbar-inverse
-                  .container
-                    div.navbar-header
-                        button.navbar-toggle.collapsed(aria-controls='navbar', aria-expanded='false', data-target='#navbar', data-toggle='collapse', type='button')
-                          span.sr-only Toggle navigation
-                            |               
-                            span.icon-bar
-                            |               
-                            span.icon-bar
-                            |               
-                            span.icon-bar
-                        a.navbar-brand.hidden-lg.hidden-md.hidden-sm(href="#") Menu
-                      div#navbar.navbar-collapse.collapse
-                        ul.nav.navbar-nav
-                          li#home
-                            a(href="/") Home
-                          li.dropdown#CompanyInfo
-                            a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="#") Company Info
-                              span.caret
-                            ul.dropdown-menu.outer-menu(role="menu")
-                              li
-                                a(href="/company-profile") Company Profile
-                              li
-                                a(href="/mangementteam")
-                                  | Management Team
-                              li
-                                a(href="/differentiator") Differentiator
-                                a(href="/career") Career
-                              li
-                                a(href="/partner") Partner
-                          li.dropdown#offering
-                            a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="/offering") 
-                              | Offering
-                              span.caret
-                            ul.dropdown-menu.outer-menu(role="menu")
-                              li
-                                a(href="/softwareproduct") Software Product
-                              li
-                                a(href="/consultingservice")
-                                  | Consulting Service
-                              li
-                                a(href="/msp") MSP & Solution Hosting
-                              li
-                                a(href="/specializedanalyse") Specialized Analyse
-                              li
-                                a(href="/technologyresale") Technology Resale
-                          li#contactlist
-                            a(href="/contact") Contact Us
-                        .clearfix
-              section
-                #inner-banner
-                #inner-content-box
-                  #content-box
-                  .container.clear
-                    .not-found-page
-                      h3.lhNormal
-                        em Oops!
-                        | You have reached a page that does not exist, but you check out these helpful links on the website:
-                      ol.numbered.bold
+        block css
+        block head
+    body: .wrapper
+        //- header
+        header
+          #header-top
+            .container
+              .row
+                .col-md-3.col-sm-3.col-xs-12
+                  .logo
+                    a(href="/")
+                      img(src="./images/logoimage.png", alt="logo")
+                .col-md-9.col-sm-9.col-xs-12
+                  .top-contact.pull-right
+                    .box-1
+                      img(src="./images/mail-icon.png")
+                      a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank") contact@vis-intel.com
+                    .box-2
+                      img(src="./images/telephone-icon.png")
+                      span (610)990-7057
+          #top-navbar.navbar.navbar-inverse
+            .container
+              div.navbar-header
+                  button.navbar-toggle.collapsed(aria-controls='navbar', aria-expanded='false', data-target='#navbar', data-toggle='collapse', type='button')
+                    span.sr-only Toggle navigation
+                      |               
+                      span.icon-bar
+                      |               
+                      span.icon-bar
+                      |               
+                      span.icon-bar
+                  a.navbar-brand.hidden-lg.hidden-md.hidden-sm(href="#") Menu
+                div#navbar.navbar-collapse.collapse
+                  ul.nav.navbar-nav
+                    li#home
+                      a(href="/") Home
+                    li.dropdown#CompanyInfo
+                      a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="#") Company Info
+                        span.caret
+                      ul.dropdown-menu.outer-menu(role="menu")
                         li
-                          | Check out our
-                          a(href="/FindLocation.aspx") Wedgewood Locations
-                          | .
+                          a(href="/company-profile") Company Profile
                         li
-                          a(href="/page/Promotions") Learn more
-                          | about how being flexible with your wedding date can save you a ton of money.
+                          a(href="/mangementteam")
+                            | Management Team
                         li
-                          | Get Wedgwood news, wedding tips, and inspirations from our
-                          a(href="http://blog.wedgewoodbanquet.com/") wedding blog
-                          | .
-                      a.btn.bt-primary.primaryBtn.btn-lg(href="/") Return to the home page
-                #footer-box        
-                  .container
-                    .row
-                      //- Document List Begins
-                      .col-md-5.col-sm-5
-                        h4 Policy
-                        .pdf-list
-                          ul
-                            li
-                              img(src="./images/pdf.png")              
-                              a(href="pdf/vi acceptable use policy.pdf")
-                                | Visual Intelligence Acceptable Use Policy(PDF)
-                            li
-                              img(src="./images/pdf.png")
-                              a(href="pdf/privacy policy.pdf")                 
-                                 | Visual Intelligence Privacy Policy(PDF)
-                      //- attach download = "name" in a(href="URL of pdf file" download="dummy name.pdf") to be able to download the pdf 
-                      //- Document List Ends
-                      //- Footer Menu Begins
-                      .col-md-4.col-sm-4
-                        h4 Our Solutions
-                        .row
-                          .col-md-6
-                            .footer-menu
-                              ul
-                                li
-                                  a(href="/healthcareinsurer") Healthcare Insurers
-                                li
-                                  a(href="/healthcareprovider") Healthcare Insurers
-                                li
-                                  a(href="/employer") Employers
-                                li
-                                  a(href="/pharmaceutical") Pharmaceuticals
-                          .col-md-6 
-                            .footer-menu
-                              ul
-                                li
-                                  a(href="/lifestyleindustry") Lifestyle Industry
-                                li
-                                  a(href="/researchinstitute") Research Institutes
-                                li
-                                  a(href="/crm") CRM
-                                li
-                                  a(href="/lawenforcement") LawEnforcement
-                      //- Footer Menu Ends
-                      //- Contact Begins
-                      .col-md-3.col-sm-3
-                        h4  Contact Us
-                        p VisualIntelligence
-                        p
-                        p LLC Newtown Square, PA 19073
-                        p            
-                          a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank")
-                            | Email:  Contact@vis-intel.com
-                        
-                        p
-                          | FollowUs :
-                          a(href="http://www.facebook.com/pages/Visual-Intelligence-LLC/125899284140778", target="_blank")
-                            img.social-icon(src="./images/facebook-icon.png")
-                          a(href="http://www.linkedin.com/company/visual-intelligence-llc?goback=%2Enpe_*1_*1_*1_*1%2Enpe_*1_en*4US_*1_*1" ,target="_blank")
-                            img.social-icon(src="./images/linked-in-icon.png")
-                      
-                      //- Contact Ends
-                //- Copyright Begins
-                #copyright-box
-                  .container
-                    span
-                      | copyright 2015 
-                      a(href="#") Visual InteligenceLLC
+                          a(href="/differentiator") Differentiator
+                          a(href="/career") Career
+                        li
+                          a(href="/partner") Partner
+                    li.dropdown#offering
+                      a.dropdown-toggle(aria-expanded="false", data-toggle="dropdown", role="button" href="/offering") 
+                        | Offering
+                        span.caret
+                      ul.dropdown-menu.outer-menu(role="menu")
+                        li
+                          a(href="/softwareproduct") Software Product
+                        li
+                          a(href="/consultingservice")
+                            | Consulting Service
+                        li
+                          a(href="/msp") MSP & Solution Hosting
+                        li
+                          a(href="/specializedanalyse") Specialized Analyse
+                        li
+                          a(href="/technologyresale") Technology Resale
+                    li#contactlist
+                      a(href="/contact") Contact Us
+                  .clearfix
+        section
+          #inner-banner
+          #inner-content-box
+            #content-box
+            .container.clear
+              .not-found-page
+                h3.lhNormal
+                  em Oops!
+                  | You have reached a page that does not exist, but you check out these helpful links on the website:
+                ol.numbered.bold
+                  li
+                    | Check out our
+                    a(href="/FindLocation.aspx") Wedgewood Locations
+                    | .
+                  li
+                    a(href="/page/Promotions") Learn more
+                    | about how being flexible with your wedding date can save you a ton of money.
+                  li
+                    | Get Wedgwood news, wedding tips, and inspirations from our
+                    a(href="http://blog.wedgewoodbanquet.com/") wedding blog
+                    | .
+                a.btn.bt-primary.primaryBtn.btn-lg(href="/") Return to the home page
+          #footer-box        
+            .container
+              .row
+                //- Document List Begins
+                .col-md-5.col-sm-5
+                  h4 Policy
+                  .pdf-list
+                    ul
+                      li
+                        img(src="./images/pdf.png")              
+                        a(href="pdf/vi acceptable use policy.pdf")
+                          | Visual Intelligence Acceptable Use Policy(PDF)
+                      li
+                        img(src="./images/pdf.png")
+                        a(href="pdf/privacy policy.pdf")                 
+                           | Visual Intelligence Privacy Policy(PDF)
+                //- attach download = "name" in a(href="URL of pdf file" download="dummy name.pdf") to be able to download the pdf 
+                //- Document List Ends
+                //- Footer Menu Begins
+                .col-md-4.col-sm-4
+                  h4 Our Solutions
+                  .row
+                    .col-md-6
+                      .footer-menu
+                        ul
+                          li
+                            a(href="/healthcareinsurer") Healthcare Insurers
+                          li
+                            a(href="/healthcareprovider") Healthcare Insurers
+                          li
+                            a(href="/employer") Employers
+                          li
+                            a(href="/pharmaceutical") Pharmaceuticals
+                    .col-md-6 
+                      .footer-menu
+                        ul
+                          li
+                            a(href="/lifestyleindustry") Lifestyle Industry
+                          li
+                            a(href="/researchinstitute") Research Institutes
+                          li
+                            a(href="/crm") CRM
+                          li
+                            a(href="/lawenforcement") LawEnforcement
+                //- Footer Menu Ends
+                //- Contact Begins
+                .col-md-3.col-sm-3
+                  h4  Contact Us
+                  p VisualIntelligence
+                  p
+                  p LLC Newtown Square, PA 19073
+                  p            
+                    a(href="mailto:someone@example.com?Subject=welcome%20to%20visintel.com" target="_blank")
+                      | Email:  Contact@vis-intel.com
+                  
+                  p
+                    | FollowUs :
+                    a(href="http://www.facebook.com/pages/Visual-Intelligence-LLC/125899284140778", target="_blank")
+                      img.social-icon(src="./images/facebook-icon.png")
+                    a(href="http://www.linkedin.com/company/visual-intelligence-llc?goback=%2Enpe_*1_*1_*1_*1%2Enpe_*1_en*4US_*1_*1" ,target="_blank")
+                      img.social-icon(src="./images/linked-in-icon.png")
+                
+                //- Contact Ends
+          //- Copyright Begins
+          #copyright-box
+            .container
+              span
+                | copyright 2015 
+                a(href="#") Visual InteligenceLLC
