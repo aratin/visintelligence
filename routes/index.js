@@ -22,6 +22,10 @@ var keystone = require('keystone'),
 	middleware = require('./middleware'),
 	importRoutes = keystone.importer(__dirname);
 
+	keystone.set('404', function(req, res, next) {
+	res.status(404).render('errors/404');
+});
+
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
