@@ -52,3 +52,6 @@ require('./news2');
 require('./news3');
 require('./news4');
 require('./whatweoffersnavigation');
+require('./providercontracting');
+require('./networkmanagement');
+

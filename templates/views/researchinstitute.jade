@@ -14,10 +14,11 @@ block content
                     if data.researchinstitutes.length
                           img(id="image",src=data.researchinstitutes[0].image.url)
                   .col-md-8
-                      p
-                        | #{data.researchinstitutes[0].text}
-                      p
-                        | #{data.researchinstitutes[0].subText}
-                      p
-                        | #{data.researchinstitutes[0].shortText}
+                      ul
+                        li
+                          | #{data.researchinstitutes[0].text}
+                        li
+                          | #{data.researchinstitutes[0].subText}
+                        li
+                          | #{data.researchinstitutes[0].shortText}
               include ../views/footermenunavigation

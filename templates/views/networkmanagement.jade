@@ -1,0 +1,42 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.networkmanagements[0].heading}
+                .row
+                  .col-md-4
+                    if data.networkmanagements.length
+                          img(id="image",src=data.networkmanagements[0].image.url)
+                  .col-md-8
+                    p 
+                      | #{data.networkmanagements[0].text}
+                    p 
+                      | #{data.networkmanagements[0].shorttext}
+                      
+                      ul
+                        li  
+                          | #{data.networkmanagements[0].subText1}
+                        li  
+                          | #{data.networkmanagements[0].subText2}
+                        li  
+                          | #{data.networkmanagements[0].subText3}
+                        li  
+                          | #{data.networkmanagements[0].subText4}
+                        li  
+                          | #{data.networkmanagements[0].subText5}
+                    p
+                      | #{data.networkmanagements[0].shortString}
+                    h4
+                      | #{data.networkmanagements[0].shortheading}
+
+                    ul
+                      li  
+                        | #{data.networkmanagements[0].subText6}
+              .expand
+              include ../views/footermenunavigation

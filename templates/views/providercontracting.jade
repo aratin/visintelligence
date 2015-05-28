@@ -1,0 +1,34 @@
+extends ../layouts/default
+block content
+    section
+      #inner-banner
+      #inner-content-box
+        #content-box
+          .container
+            #offerings
+              include ../views/icon.jade
+              .col-md-9#content-data
+                h2 #{data.providercontractings[0].heading}
+                .row
+                  .col-md-4
+                    if data.providercontractings.length
+                          img(id="image",src=data.providercontractings[0].image.url)
+                  .col-md-8
+                     h4
+                        | #{data.providercontractings[0].headingText}
+                      p
+                        | #{data.providercontractings[0].text}
+                      h4
+                        | #{data.providercontractings[0].headingText1}
+                      p
+                        | #{data.providercontractings[0].subText}
+                      h4
+                        | #{data.providercontractings[0].headingText2}
+                      p
+                        | #{data.providercontractings[0].shortString}
+                      h4
+                        | #{data.providercontractings[0].headingText3}
+                      p
+                        | #{data.providercontractings[0].shortText}
+              .expand
+              include ../views/footermenunavigation
