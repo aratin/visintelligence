@@ -84,7 +84,7 @@ html
           section
             #inner-banner
             #inner-content-box
-              #content-box
+              #thankYou-box
                 .container
                     if enquirySubmitted
                         h3 Thank u for getting touch
@@ -96,15 +96,15 @@ html
                                 input(type='text', name='name.full', value=formData['name.full'], required).form-control
                             .form-group(class=validationErrors.email ? 'has-error' : null)
                                 label Email
-                                input(type='email', name='email', value=formData.email, required).form-control
+                                input(type='email', name='email', value=formData.email, id="txtEmail", required).form-control
                             .form-group
                                 label Phone
-                                input(type='text', name='phone', value=formData.phone, required).form-control
+                                input(type='text', name='phone', value=formData.phone, onblur="checkPhone()" ,id="txtPhone" ,required).form-control
                             .form-group(class=validationErrors.message ? 'has-error' : null)
                                 label Message
                                 textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
                             .form-actions
-                                button(type='submit').btn.btn-primary Send
+                                button(type='submit' onblur="checkEmail()").btn.btn-primary Send
               #footer-box        
                 .container
                   .row
