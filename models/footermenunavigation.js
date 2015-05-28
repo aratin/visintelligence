@@ -7,6 +7,8 @@ var Footermenunavigation = new keystone.List('Footermenunavigation', {
 
 Footermenunavigation.add({
 	healthcareinsurer:{type:String},
+	providercontracting:{type:String},
+	networkmanagement:{type:String},
 	healthcareprovider:{type:String},
 	employer:{type:String},
 	pharmaceutical:{type:String},
