@@ -14,14 +14,15 @@ block content
                     if data.healthcareproviders.length
                           img(id="image",src=data.healthcareproviders[0].image.url)
                   .col-md-8
-                      p
-                        | #{data.healthcareproviders[0].text}
-                      p
-                        | #{data.healthcareproviders[0].subText}
-                      p
-                        | #{data.healthcareproviders[0].shortText}
-                      p
-                        | #{data.healthcareproviders[0].subString}
-                      p
-                        | #{data.healthcareproviders[0].shortString}
+                      ul
+                        li
+                          | #{data.healthcareproviders[0].text}
+                        li
+                          | #{data.healthcareproviders[0].subText}
+                        li
+                          | #{data.healthcareproviders[0].shortText}
+                        li
+                          | #{data.healthcareproviders[0].subString}
+                        li
+                          | #{data.healthcareproviders[0].shortString}
               include ../views/footermenunavigation
