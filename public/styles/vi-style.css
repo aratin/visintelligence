@@ -49,6 +49,7 @@ input.form-control, textarea.form-control {width: 50%;}
 
 /**************************************** Content Box *****************************************/
 #content-box {padding: 25px 0 45px;}
+#thankYou-box{padding:95px 0px;}
 #content-box  p { font-size: 14px; color: #666; line-height: 22px; margin-bottom:0;}
 #content-box .read-more { color: #010101; font-weight: 600; line-height: 33px; }
 #content-box .heading1 {margin: 1px; color: #010101; padding: 3px 10px; cursor: pointer; position: relative; background-color:#c30;}
@@ -163,6 +164,7 @@ input.form-control, textarea.form-control {width: 50%;}
 	#offerings .col-md-4 { width: 40% !important;}
 	.top-contact.pull-right{float: none !important;}
 	#offerings .col-md-9 { width: 100%;}
+	#thankYou-box{padding:40px 0px;}
 	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus,
 	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover{background-color: #000; background-image: none; color: #fff;}
 }
@@ -187,6 +189,7 @@ input.form-control, textarea.form-control {width: 50%;}
 	.pdf-list{overflow: hidden;}
 	#footer-box .footer-menu ul li{margin-left: 10px;}
 	#content-box .offer-box{margin-bottom: 20px;}
+	#thankYou-box{padding:40px 0px;}
 }
 @media (max-width: 360px){
 	#footer-box .pdf-list ul li a{top:5px;}
