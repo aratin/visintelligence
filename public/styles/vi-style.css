@@ -49,6 +49,7 @@ input.form-control, textarea.form-control {width: 50%;}
 
 /**************************************** Content Box *****************************************/
 #content-box {padding: 25px 0 45px;}
+#content-box .dynamiclist{list-style-position: inside;}
 #content-box .dynamiclist li{padding-left: 10px;}
 #thankYou-box{padding:95px 0px;}
 #content-box  p { font-size: 14px; color: #666; line-height: 22px; margin-bottom:0;}
